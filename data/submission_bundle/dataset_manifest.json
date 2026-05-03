@@ -1,0 +1,53 @@
+{
+  "raw_datasets": {
+    "raw_psy_train_multiturn.json": {
+      "source_path": "data/PsyDTCorpus_train_mulit_turn_packing.json",
+      "description": "Original Psy training dataset."
+    },
+    "raw_psy_test_singleturn.json": {
+      "source_path": "data/PsyDTCorpus_test_single_turn_split.json",
+      "description": "Original Psy single-turn test split."
+    },
+    "raw_dial_d101.json": {
+      "source_path": "data/PsyDial-D101.json",
+      "description": "Original PsyDial D101 dataset."
+    },
+    "raw_dial_d4.json": {
+      "source_path": "data/PsyDial-D4.json",
+      "description": "Original PsyDial D4 dataset."
+    }
+  },
+  "poison_datasets": {
+    "attack_ad_train.json": {
+      "source_path": "${SOULCHATCORPUS_ROOT}/backdoor_psy.json",
+      "paper_attack": "A_d",
+      "role": "train"
+    },
+    "attack_ad_test.json": {
+      "source_path": "${SOULCHATCORPUS_ROOT}/backdoor_test.json",
+      "paper_attack": "A_d",
+      "role": "test"
+    },
+    "attack_ac_train.json": {
+      "source_path": "data/attack_dialogues_pure_train_500.json",
+      "paper_attack": "A_c",
+      "role": "train"
+    },
+    "attack_ac_test.json": {
+      "source_path": "data/attack_dialogues_pure_test_134.json",
+      "paper_attack": "A_c",
+      "role": "test"
+    },
+    "attack_au_train.json": {
+      "source_path": "test/r3_prod500_dialogue_no_polisher.json",
+      "paper_attack": "A_u",
+      "role": "train"
+    },
+    "attack_au_test.json": {
+      "source_path": "data/im_psy_attack_test_134_triggered.json",
+      "paper_attack": "A_u",
+      "role": "test"
+    }
+  },
+  "note": "Standardized submission names only. Original source files remain unchanged elsewhere in the repository."
+}
